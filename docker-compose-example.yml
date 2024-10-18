@@ -1,0 +1,36 @@
+version: '3'
+
+networks:
+  banco:
+
+
+services:
+  app_laravel:
+    image: php:8.3.11-cli
+    working_dir: /ideas-project
+    command: bash ./app.sh
+    depends_on:
+      - db
+    ports:
+      - 80:80
+    volumes:
+      - ./ideas-project:/ideas-project
+    environment:
+      DB_DATABASE: ideas
+      DB_USERNAME: root
+      DB_HOST: db
+      DB_PASSWORD:
+      MAIL_USERNAME:
+      MAIL_PASSWORD:
+    networks:
+      - banco
+  db:
+    image: mysql:8.4.2
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD:
+    volumes:
+      # Scripts
+      - ./scripts/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - banco
