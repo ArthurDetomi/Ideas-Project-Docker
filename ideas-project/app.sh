@@ -22,5 +22,7 @@ php artisan route:cache
 
 php artisan key:generate
 
+php artisan storage:link
+
 # Inicia o servidor Laravel
 php artisan serve --host=0.0.0.0 --port=80
