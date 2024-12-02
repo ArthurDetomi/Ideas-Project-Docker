@@ -34,15 +34,6 @@ Este projeto tem como objetivo facilitar **meu processo de instalação e deploy
    ```
 ---
 
-## 🧹 Limpeza
-
-Se quiser remover os contêineres, imagens e volumes:
-```bash
-docker-compose down --rmi all --volumes
-```
-
----
-
 ## 📄 Observações
 
 Este projeto foi dockerizado para meu uso pessoal. Caso alguém queira utilizá-lo, pequenas adaptações podem ser necessárias, especialmente nos nomes de serviços e bancos de dados.
