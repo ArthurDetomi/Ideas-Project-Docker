@@ -27,12 +27,7 @@ class User extends Authenticatable
         'is_admin'
     ];
 
-    /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
-    protected $hidden = [use Illuminate\Database\Eloquent\Relations\HasMany;
+    /*
      * The attributes that should be cast.
      *
      * @var array<string, string>
